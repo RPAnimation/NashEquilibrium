@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Nash Equilibrium Calculator</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/nerdamer.core.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Algebra.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Calculus.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Solve.js"></script>
+
+	<h1>Enter strategies:</h1>
+	<table>
+	<thead>
+		<tr>
+			<th colspan="2" rowspan="2"></th>
+			<th colspan="3">Player 1</th>
+		</tr>
+		<tr>
+			<td>Strategy A</td>
+			<td>Strategy B</td>
+			<td>Strategy C</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td rowspan="3">Player 2</td>
+			<td>Strategy A</td>
+			<td id="00">
+				<input size="2" id="a11" value="0">
+				<input size="2" id="a12" value="0">
+			</td>
+			<td id="01">
+				<input size="2" id="b11" value="-1">
+				<input size="2" id="b12" value="1">
+			</td>
+			<td id="02">
+				<input size="2" id="c11" value="1">
+				<input size="2" id="c12" value="-1">
+			</td>
+		</tr>
+		<tr>
+			<td>Strategy B</td>
+			<td id="10">
+				<input size="2" id="a21" value="1">
+				<input size="2" id="a22" value="-1">
+			</td>
+			<td id="11">
+				<input size="2" id="b21" value="0">
+				<input size="2" id="b22" value="0">
+			</td>
+			<td id="12">
+				<input size="2" id="c21" value="-1">
+				<input size="2" id="c22" value="1">
+			</td>
+		</tr>
+		<tr>
+			<td>Strategy C</td>
+			<td id="20">
+				<input size="2" id="a31" value="-1">
+				<input size="2" id="a32" value="1">
+			</td>
+			<td id="21">
+				<input size="2" id="b31" value="1">
+				<input size="2" id="b32" value="-1">
+			</td>
+			<td id="22">
+				<input size="2" id="c31" value="0">
+				<input size="2" id="c32" value="0">
+			</td>
+		</tr>
+	</tbody>
+	</table>
+	<p id="error"></p>
+	<button type="button" onclick="solve()">Check solution</button>
+	
+	<script  src="./script.js"></script>
+</body>
+</html>
